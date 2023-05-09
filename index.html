@@ -19,5 +19,17 @@
     <div id="gif">
       <img src="https://images-cdn.exchange.art/0s-DhBd3I_sK8cxzl_aWCm1M92WTdc_6QhA3cXGduks?ext=fastly&optimize=medium" alt="GIF">
     </div>
+    <script>
+      var elem = document.getElementById("gif");
+      elem.onclick = function() {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+          elem.msRequestFullscreen();
+        }
+      };
+    </script>
   </body>
 </html>
