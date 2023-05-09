@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Fullscreen Page</title>
+    <title>GIF</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+      
+      #gif {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
     <div id="gif">
-      <img src="https://images-cdn.exchange.art/0s-DhBd3I_sK8cxzl_aWCm1M92WTdc_6QhA3cXGduks?ext=fastly&optimize=medium" alt="GIF">
+      <img src="https://media.giphy.com/media/3o7bu3XilJ5BOiSGic/giphy.gif" alt="GIF">
     </div>
-    <script>
-      document.documentElement.requestFullscreen().catch(err => {
-        console.log(`Error: ${err.message}`);
-      });
-    </script>
   </body>
 </html>
