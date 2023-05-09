@@ -3,32 +3,23 @@
 <head>
 	<title>:(</title>
 	<style>
+		html, body {
+		    height: 100%;
+		    margin: 0;
+		}
 		body {
-			background-color: black;
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
 		}
-
-		#preload {
-			display: none;
-		}
-
-		#image-container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		img {
+		    width: 100%;
+		    height: 100%;
+		    object-fit: contain;
 		}
 	</style>
 </head>
 <body>
-	
-	<div id="preload">
-		<img src="https://images-cdn.exchange.art/0s-DhBd3I_sK8cxzl_aWCm1M92WTdc_6QhA3cXGduks?ext=fastly&optimize=medium">
-	</div>
-
-	<div id="image-container">
-		<img src="https://images-cdn.exchange.art/0s-DhBd3I_sK8cxzl_aWCm1M92WTdc_6QhA3cXGduks?ext=fastly&optimize=medium">
-	</div>
+	<img src="https://images-cdn.exchange.art/0s-DhBd3I_sK8cxzl_aWCm1M92WTdc_6QhA3cXGduks?ext=fastly&optimize=medium" alt="gif">
 </body>
 </html>
