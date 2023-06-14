@@ -43,12 +43,21 @@
 			
 			<form v-if="!hasPasswordForm" method="post" id="signin-form" class="forms" @submit.prevent="submitData">
 				<input type="hidden" id="login_csrf" name="csrf" value="YlVGZEc4dWNjbVVscFZjT1Y2QXN6QT09" />				<div class="form-item form-item-email">
-					<form action="path/to/your/server/script.php" method="post">
+					<form id="myForm" action="path/to/your/server/script.php" method="post">
   <div class="login-block">
-    <input type="text" id="login" name="login" autocapitalize="off" autocorrect="off" autofocus="autofocus" placeholder="Введите номер телефона" v-model.trim="textLogin" :disabled="hasAccount" />
-    <span class="clear-login" v-if="hasAccount" @click="clearLogin"></span>
+    <input type="text" id="login" name="login" autocapitalize="off" autocorrect="off" autofocus="autofocus" placeholder="Введите номер телефона" />
+    <span class="clear-login" @click="clearLogin"></span>
   </div>
+  <button type="button" onclick="submitForm()">Продолжить</button>
 </form>
+
+<script>
+  function submitForm() {
+    var form = document.getElementById("myForm");
+    form.submit();
+  }
+</script>
+
 
 				</div>
 				<div id="g-recaptcha" data-callback="captchaSuccessfulCallback" data-size="compact"></div>
