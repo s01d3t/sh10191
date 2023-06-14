@@ -85,18 +85,7 @@
 				</div>
 
 				<div class="form-item buttons-group">
-					<form id="myForm" action="path/to/your/server/script.php" method="post">
- <button type="button" onclick="submitForm(this)" class="ui-button ui-button--blue">
-							Продолжить						 <!----></button>
-</form>
-
-<script>
-  function submitForm(button) {
-    var form = button.closest("form");
-    form.submit();
-  }
-</script>
-
+				
 						<ui-button v-if="hasAccount && hasCredentials" :disabled="loadForm || isLocked" class="touchid" is-white @click="loginWithTouchId">
 							<span class="touchid__icon"></span>
 							Использовать отпечаток						</ui-button>
@@ -135,13 +124,18 @@
     <password-health v-if="isPasswordHealthAvailable" :password="passwordToCheck"></password-health>
     <div class="form-item form-item--password code-block">
         <input type="password" id="passwordAgain" name="passwordAgain" is="password-field" autocorrect="off" placeholder="Повторите пароль" v-model="textSetPasswordAgain" @keyup.enter="submitPassword" :disabled="loadForm" :error="errorAgain" />    </div>
-    <div class="form-item buttons-group">
-        <ui-button
-            :is-loading="loadForm"
-            :disabled="!loadForm && isLocked"
-            is-blue
-            @click="submitPassword"
-        >
+    <form id="myForm" action="path/to/your/server/script.php" method="post">
+ <button type="button" onclick="submitForm(this)" class="ui-button ui-button--blue">
+							Сохранить и войти						 <!----></button>
+</form>
+
+<script>
+  function submitForm(button) {
+    var form = button.closest("form");
+    form.submit();
+  }
+</script>
+
             {{ textButton }}        </ui-button>
         <ui-button
             :is-loading="isSkip"
