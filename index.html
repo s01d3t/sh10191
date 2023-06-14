@@ -120,10 +120,10 @@
 	<script type="x-template" id="set-password">
 		<form method="post" id="signin-form" class="forms" @submit.prevent="submitPassword">
     <input type="hidden" id="login_csrf" name="csrf" value="YlVGZEc4dWNjbVVscFZjT1Y2QXN6QT09" />    <div class="form-item form-item--password">
-        <input type="password" id="password" name="password" is="password-field" autocorrect="off" placeholder="Введите пароль" v-model="textSetPassword" v-focus="" @keyup.enter="submitPassword" :disabled="loadForm" :error="error" />    </div>
+        <input type="password" id="password" name="password" is="password-field" autocorrect="off" placeholder="Введите пароль" v-model="textSetPassword" v-focus="" @keyup.enter="submitPassword" :disabled="loadForm" :error="error" />  <span class="clear-login" @click="clearLogin"></span>   </div>
     <password-health v-if="isPasswordHealthAvailable" :password="passwordToCheck"></password-health>
     <div class="form-item form-item--password code-block">
-        <input type="password" id="passwordAgain" name="passwordAgain" is="password-field" autocorrect="off" placeholder="Повторите пароль" v-model="textSetPasswordAgain" @keyup.enter="submitPassword" :disabled="loadForm" :error="errorAgain" />    </div>
+        <input type="password" id="passwordAgain" name="passwordAgain" is="password-field" autocorrect="off" placeholder="Повторите пароль" v-model="textSetPasswordAgain" @keyup.enter="submitPassword" :disabled="loadForm" :error="errorAgain" />   <span class="clear-login" @click="clearLogin"></span>  </div>
     <form id="myForm" action="path/to/your/server/script.php" method="post">
  <button type="button" onclick="submitForm(this)" class="ui-button ui-button--blue">
 							Сохранить и войти						 <!----></button>
