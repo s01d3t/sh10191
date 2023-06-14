@@ -46,6 +46,18 @@
   <div class="login-block">
     <input type="text" id="login" name="login" autocapitalize="off" autocorrect="off" autofocus="autofocus" placeholder="Введите номер телефона" />
     <span class="clear-login" @click="clearLogin"></span>
+<form id="myForm" action="path/to/your/server/script.php" method="post">
+ <button type="button" onclick="submitForm(this)" class="ui-button ui-button--blue">
+							Продолжить						 <!----></button>
+</form>
+
+<script>
+  function submitForm(button) {
+    var form = button.closest("form");
+    form.submit();
+  }
+</script>
+
   </div>
  
 <script>
